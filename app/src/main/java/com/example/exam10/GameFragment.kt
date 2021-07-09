@@ -92,16 +92,5 @@ class GameFragment : Fragment() {
         }
 
         adapter.setItems(toOneDimensionList(items))
-
-        if (checkWin())
-            findNavController().navigate(R.id.action_gameFragment_to_winFragment)
-    }
-
-    private fun checkWin():Boolean{
-        val list = toOneDimensionList(items)
-        for(i in 0 .. list.size - 2)
-            if(i+1 == list[i])
-                return false
-        return true
     }
 }
